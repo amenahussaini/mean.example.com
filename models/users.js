@@ -21,3 +21,8 @@ var Users = new Schema({
     default: false
   }
 });
+
+//Add unique validation properties to the model
+Users.plugin(uniqueValidator);
+
+module.exports  = mongoose.model('Users', Users);
